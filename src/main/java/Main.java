@@ -20,10 +20,14 @@ public class Main {
                 case ENCRYPTION -> {
                     String filePath = SafeInput.inputFilePath();
                     File fileToEncrypt = Files.createFile(filePath);
+                    // While the path is not valid, or something get wrong:
                     while (fileToEncrypt == null) {
+                        // Then go over that process:
                         filePath = SafeInput.inputFilePath();
                         fileToEncrypt = Files.createFile(filePath);
                     }
+
+                    // After we checked everything we need, we can encrypt our file:
                     Encrypt.encryptFile(fileToEncrypt);
                 }
                 case DECRYPTION -> {

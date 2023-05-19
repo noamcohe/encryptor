@@ -9,6 +9,7 @@ public class Menu {
     private static Choice choiceInput() {
         int choice = SafeInput.integerInput();
 
+        // while the user choice is outside the range:
         while (!(choice >= 1 && choice <= 3)) {
             System.out.println("""
                 You must choose an option from those numbers!

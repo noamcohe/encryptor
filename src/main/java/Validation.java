@@ -13,6 +13,7 @@ public class Validation {
             return false;
         }
 
+        // regular expression - check that user choice is a number:
         Pattern pattern = Pattern.compile("\\d+");
 
         return pattern.matcher(choice).matches();
@@ -30,8 +31,10 @@ public class Validation {
 
         String fileName = file.getName();
 
+        // Go to the last instance of '.' in the file name:
         int index = fileName.lastIndexOf(".");
         if (index > 0) {
+            // And after that, take all the characters from the '.' until the end.
             String extension = fileName.substring(index + 1);
             return extension.equals("txt");
         }

@@ -10,6 +10,7 @@ public class Files {
      */
     public static File createFile(String path) {
         File textFile = new File(path);
+        // Check the validation, existence and extension of the file:
         if (!Validation.isValidExtension(textFile) &&
                 !(textFile.exists() && !textFile.isDirectory())) {
             System.out.println("The path you entered is not valid, or not exist! Let's try again:");
