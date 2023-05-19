@@ -4,6 +4,11 @@ public class SafeInput {
 
     static Scanner scanner = new Scanner(System.in);
 
+    /**
+     * This function take a string input from the user, and convert it to integer.
+     * We don't use 'nextInt()' method, to avoid exceptions like illegal type.
+     * @return The user input as an integer variable.
+     */
     public static int integerInput() {
         String selection = scanner.next();
 
@@ -17,6 +22,10 @@ public class SafeInput {
         return Integer.parseInt(selection);
     }
 
+    /**
+     * Input the path of a file from the user.
+     * @return The user input.
+     */
     public static String inputFilePath() {
         String filePath;
 
