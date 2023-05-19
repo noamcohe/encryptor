@@ -1,19 +1,39 @@
-package org.example;
+import Enums.Choice;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.io.File;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Choice startSelection;
+        boolean flag = true;
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        while (flag) {
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+            startSelection = Menu.startMenu();
+
+            switch (startSelection) {
+                case ENCRYPTION -> {
+                    String filePath = SafeInput.inputFilePath();
+                    File fileToEncrypt = Files.createFile(filePath);
+                    while (fileToEncrypt == null) {
+                        filePath = SafeInput.inputFilePath();
+                        fileToEncrypt = Files.createFile(filePath);
+                    }
+                    Encrypt.encryptFile(fileToEncrypt);
+                }
+                case DECRYPTION -> {
+                    String filePath = SafeInput.inputFilePath();
+                    File fileToDecrypt = Files.createFile(filePath);
+                    while (fileToDecrypt == null) {
+                        filePath = SafeInput.inputFilePath();
+                        fileToDecrypt = Files.createFile(filePath);
+                    }
+                    Decrypt.decryptFile(fileToDecrypt);
+                }
+                case CLOSE_PROGRAM -> flag = false;
+            }
         }
     }
+
 }
+
