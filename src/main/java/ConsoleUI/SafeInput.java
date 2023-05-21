@@ -1,3 +1,7 @@
+package ConsoleUI;
+
+import DAL.Validation;
+
 import java.util.Scanner;
 
 public class SafeInput {

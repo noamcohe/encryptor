@@ -1,3 +1,4 @@
+package ConsoleUI;
 import Enums.Choice;
 
 public class Menu {
