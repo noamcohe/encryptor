@@ -8,8 +8,4 @@ public class EncryptedFile extends File {
     public EncryptedFile(String pathname) {
         super(pathname);
     }
-
-    public void encryptFile(File fileToEncrypt) {
-
-    }
 }

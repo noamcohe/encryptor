@@ -1,17 +1,22 @@
 package ConsoleUI;
+import DAL.FileObject;
 import Enums.Choice;
-import java.io.File;
 import DalObject.DalObject;
 
 public class Main {
 
     static DalObject dalObject = new DalObject();
 
-    public static File addNewFile() {
-        File file;
+    /**
+     * Input file path from the user, and if all is valid -
+     * then create new file with this path, and add it to DataSource
+     * @return the file the user wants
+     */
+    public static FileObject addNewFile() {
+        FileObject file;
 
         while (true) {
-            file = new File(SafeInput.inputFilePath());
+            file = new FileObject(SafeInput.inputFilePath());
 
             if (file.canRead() && file.exists() && file.isFile()) {
                 dalObject.createFile(file);
@@ -20,13 +25,6 @@ public class Main {
 
             System.out.println("The path you entered is not valid, or not exist! Let's try again:");
         }
-    }
-
-    public static void encryptNewFile(File file) {
-    }
-
-    public static void decryptNewFile(File file) {
-
     }
 
     public static void main(String[] args) {
@@ -39,12 +37,10 @@ public class Main {
 
             switch (startSelection) {
                 case ENCRYPTION -> {
-                    File fileToEncrypt = addNewFile();
-                    encryptNewFile(fileToEncrypt);
+                    dalObject.createEncryptedFile(addNewFile().encryptFile());
                 }
                 case DECRYPTION -> {
-                    File fileToDecrypt = addNewFile();
-                    decryptNewFile(fileToDecrypt);
+                    dalObject.createDecryptedFile(addNewFile().decryptFile());
                 }
                 case CLOSE_PROGRAM -> flag = false;
             }
