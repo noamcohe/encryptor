@@ -1,5 +1,5 @@
-package ConsoleUI;
-import Enums.Choice;
+package consoleUI;
+import enums.Choice;
 
 public class Menu {
 
@@ -8,10 +8,7 @@ public class Menu {
      * @return the user choice
      */
     public static void startMenu() {
-        System.out.println("""
-                Welcome to encryptor program!
-                Please enter the option number you would like to perform:
-                """);
+        System.out.println(Utils.startMenuMessage);
 
         Choice[] choiceArray = Choice.values();
         for (int i = 0; i < choiceArray.length; i++) {

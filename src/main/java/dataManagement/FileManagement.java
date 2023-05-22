@@ -1,6 +1,7 @@
-package DataManagement;
+package dataManagement;
 
-import ConsoleUI.SafeInput;
+import consoleUI.SafeInput;
+import consoleUI.Utils;
 import java.io.File;
 
 public class FileManagement {
@@ -12,13 +13,13 @@ public class FileManagement {
     public static File openFileObject(String operationType) {
         File file;
 
-        System.out.println("Please enter the path of the file you want to " + operationType + ":");
+        System.out.println(Utils.takePath + operationType + ":");
 
         while (true) {
             file = new File(SafeInput.stringInput());
 
             if (!file.isFile()) {
-                System.out.println("The path you entered is not valid, or not exist! Let's try again:");
+                System.out.println(Utils.invalidPath);
             }
 
             else {

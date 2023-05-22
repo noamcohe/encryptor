@@ -1,6 +1,7 @@
-package ConsoleUI;
+package consoleUI;
 
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class SafeInput {
 
@@ -11,12 +12,11 @@ public class SafeInput {
      * We don't use 'nextInt()' method, to avoid exceptions like illegal type.
      * @return The user input as an integer variable.
      */
-    public static int integerInput() {
+    public static int integerInput(Pattern range) {
         String selection = scanner.nextLine();
 
-        // While it's not a number:
-        while (!selection.matches("[1-3]")) {
-            System.out.println("Your number is out of the range, or it's not a number. Let's try again:");
+        while (!range.matcher(selection).matches()) {
+            System.out.println(Utils.invalidChoiceInput);
             selection = scanner.nextLine();
         }
 
