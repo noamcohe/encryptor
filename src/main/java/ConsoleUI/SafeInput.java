@@ -1,12 +1,10 @@
 package ConsoleUI;
 
-import DAL.Validation;
-
 import java.util.Scanner;
 
 public class SafeInput {
 
-    static Scanner scanner = new Scanner(System.in);
+    public static Scanner scanner = new Scanner(System.in);
 
     /**
      * This function take a string input from the user, and convert it to integer.
@@ -14,29 +12,19 @@ public class SafeInput {
      * @return The user input as an integer variable.
      */
     public static int integerInput() {
-        String selection = scanner.next();
+        String selection = scanner.nextLine();
 
-        while (!Validation.isNumeric(selection)) {
-            System.out.println("""
-                        You must enter a number!
-                        Let's try again:""");
-            selection = scanner.next();
+        // While it's not a number:
+        while (!selection.matches("[1-3]")) {
+            System.out.println("Your number is out of the range, or it's not a number. Let's try again:");
+            selection = scanner.nextLine();
         }
 
         return Integer.parseInt(selection);
     }
 
-    /**
-     * Input the path of a file from the user.
-     * @return The user input.
-     */
-    public static String inputFilePath() {
-        String filePath;
-
-        System.out.println("Please enter the path of the file you want to encrypt / decrypt:");
-        filePath = scanner.next();
-
-        return filePath;
+    public static String stringInput() {
+        return scanner.nextLine();
     }
 
 }

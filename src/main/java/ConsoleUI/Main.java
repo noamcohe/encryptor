@@ -1,50 +1,20 @@
 package ConsoleUI;
-import DAL.FileObject;
+import DataManagement.Crypto;
 import Enums.Choice;
-import DalObject.DalObject;
 
 public class Main {
-
-    static DalObject dalObject = new DalObject();
-
-    /**
-     * Input file path from the user, and if all is valid -
-     * then create new file with this path, and add it to DataSource
-     * @return the file the user wants
-     */
-    public static FileObject addNewFile() {
-        FileObject file;
-
-        while (true) {
-            file = new FileObject(SafeInput.inputFilePath());
-
-            if (file.canRead() && file.exists() && file.isFile()) {
-                dalObject.createFile(file);
-                return file;
-            }
-
-            System.out.println("The path you entered is not valid, or not exist! Let's try again:");
-        }
-    }
-
     public static void main(String[] args) {
-        Choice startSelection;
-        boolean flag = true;
+        Menu.startMenu();
 
-        while (flag) {
-
-            startSelection = Menu.startMenu();
-
-            switch (startSelection) {
-                case ENCRYPTION -> {
-                    dalObject.createEncryptedFile(addNewFile().encryptFile());
-                }
-                case DECRYPTION -> {
-                    dalObject.createDecryptedFile(addNewFile().decryptFile());
-                }
-                case CLOSE_PROGRAM -> flag = false;
-            }
+        Choice startSelection = Choice.fromInteger(SafeInput.integerInput());
+        while (startSelection == null) {
+            System.out.println("You must choose an option from those numbers! Please try again:");
+            startSelection = Choice.fromInteger(SafeInput.integerInput());
         }
+
+        startSelection.performAction();
+
+        SafeInput.scanner.close();
     }
 
 }
