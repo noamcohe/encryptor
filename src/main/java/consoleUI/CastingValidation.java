@@ -1,5 +1,4 @@
 package consoleUI;
-
 import enums.Choice;
 
 public class CastingValidation {
@@ -7,8 +6,8 @@ public class CastingValidation {
         int numericChoice = num;
 
         while (!Choice.inRange(numericChoice)) {
-            System.out.println(Utils.INVALID_RANGE);
-            numericChoice = Input.numInput();
+            System.out.println(HelpConstants.INVALID_RANGE);
+            numericChoice = Input.integerInput();
         }
 
         return Choice.values()[numericChoice - 1];

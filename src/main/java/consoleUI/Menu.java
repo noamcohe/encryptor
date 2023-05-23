@@ -8,7 +8,7 @@ public class Menu {
      * @return the user choice
      */
     public static void startMenu() {
-        System.out.println(Utils.START_MENU_MESSAGE);
+        System.out.println(HelpConstants.START_MENU_MESSAGE);
 
         Choice[] choiceArray = Choice.values();
         for (int i = 0; i < choiceArray.length; i++) {
