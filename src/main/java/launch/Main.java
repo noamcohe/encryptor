@@ -1,17 +1,13 @@
 package launch;
+import consoleUI.CastingValidation;
 import consoleUI.Menu;
-import consoleUI.SafeInput;
-import consoleUI.Utils;
-import enums.Choice;
+import consoleUI.Input;
 
 public class Main {
     public static void main(String[] args) {
-        while (true) {
-            Menu.startMenu();
-            Choice
-                    .values()[SafeInput.integerInput(Utils.createRangePattern(Choice.values().length)) - 1]
-                    .performAction();
-        }
+        Menu.startMenu();
+        CastingValidation.fromIntToChoice(Input.numInput()).performAction();
+        Input.scanner.close();
     }
 
 }
