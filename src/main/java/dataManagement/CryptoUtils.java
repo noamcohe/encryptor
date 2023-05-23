@@ -1,9 +1,8 @@
 package dataManagement;
-
 import consoleUI.Input;
 import consoleUI.HelpConstants;
-
 import java.nio.file.Path;
+import org.jetbrains.annotations.NotNull;
 
 public class CryptoUtils {
 
@@ -13,7 +12,7 @@ public class CryptoUtils {
      * @param newExtension the extension needs to be after the new file name.
      * @return New path contains old file name, but with new extension that given as a param.
      */
-    public Path getNewFilePath(Path oldPath, String newExtension) {
+    public Path getNewFilePath(@NotNull Path oldPath, String newExtension) {
         String originalFilePath = oldPath.toString();
         String fileNameWithoutExtension = originalFilePath.substring(0, originalFilePath.lastIndexOf('.'));
 

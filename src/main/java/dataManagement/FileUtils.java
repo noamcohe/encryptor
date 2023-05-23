@@ -1,5 +1,7 @@
 package dataManagement;
 import consoleUI.HelpConstants;
+import org.jetbrains.annotations.NotNull;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -13,7 +15,7 @@ public class FileUtils {
      * @param filePath path of the file to read.
      * @return String contains all the file data.
      */
-    public static String readFileToStr(Path filePath) {
+    public static @NotNull String readFileToStr(Path filePath) {
         try {
             byte[] bytes = Files.readAllBytes(filePath);
             return new String(bytes, StandardCharsets.UTF_8);
@@ -29,7 +31,7 @@ public class FileUtils {
      * @param filePath Path for the new file.
      * @param newData string contains all the data needs to written to the output file.
      */
-    public static void writeStrToFile(Path filePath, String newData) {
+    public static void writeStrToFile(Path filePath, @NotNull String newData) {
         try {
             Files.createFile(filePath);
             Files.write(filePath, newData.getBytes(), StandardOpenOption.TRUNCATE_EXISTING);

@@ -1,6 +1,8 @@
 package dataManagement;
 import lombok.Getter;
 import lombok.Setter;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Random;
 
 @Getter @Setter
@@ -55,7 +57,7 @@ public class CaesarEncryptor {
      * @param encryptFlag A flag mention if the user wants to encrypt or decrypt.
      * @return A new string that contains 'data' param after encryption / decryption.
      */
-    public String processString(String data, int key, boolean encryptFlag) {
+    public String processString(@NotNull String data, int key, boolean encryptFlag) {
         StringBuilder processedData = new StringBuilder();
         char processedChar;
 
