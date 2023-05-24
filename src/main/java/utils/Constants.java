@@ -1,6 +1,6 @@
-package consoleUI;
+package utils;
 
-public class HelpConstants {
+public class Constants {
     public static final String START_MENU_MESSAGE = """
                 Welcome to encryptor program!
                 Please enter the option number you would like to perform:

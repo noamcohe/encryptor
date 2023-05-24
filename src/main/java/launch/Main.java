@@ -1,16 +1,24 @@
 package launch;
-import consoleUI.CastingValidation;
-import consoleUI.Menu;
-import consoleUI.Input;
+import menus.ConsoleMenus;
+import consoleUI.ConsoleInput;
+import consoleUI.GeneralInput;
+import enums.Choice;
 
 public class Main {
     public static void main(String[] args) {
-        CastingValidation castOptions = new CastingValidation();
-        Input inputOptions = new Input();
+        GeneralInput consoleInput = new ConsoleInput();
+        Choice userChoice;
+        boolean shouldExit = false;
 
-        Menu.startMenu();
-        castOptions.fromIntToChoice(inputOptions.integerInput()).performAction(inputOptions);
-        Input.scanner.close();
+
+        while (!shouldExit) {
+            ConsoleMenus.printStartMenu();
+            userChoice = consoleInput.getChoice();
+
+            shouldExit = userChoice.performAction(consoleInput);
+        }
+
+        ConsoleInput.scanner.close();
     }
 
 }

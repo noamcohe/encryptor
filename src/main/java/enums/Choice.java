@@ -1,31 +1,31 @@
 package enums;
-import consoleUI.Input;
-import consoleUI.HelpConstants;
-import dataManagement.CryptoUtils;
+import consoleUI.GeneralInput;
+import dataManagement.CryptoServices;
 import java.time.temporal.ValueRange;
 
 public enum Choice {
     ENCRYPTION {
         @Override
-        public void performAction(Input inputOptions) {
-            cryptoOptions.processFile(inputOptions.pathInput(), HelpConstants.ENCRYPTION_FLAG);
+        public boolean performAction(GeneralInput consoleInput) {
+            cryptoServices.fileEncryption(consoleInput.getPath());
+            return false;
         }
     },
     DECRYPTION {
         @Override
-        public void performAction(Input inputOptions) {
-            cryptoOptions.processFile(inputOptions.pathInput(), HelpConstants.DECRYPTION_FLAG);
+        public boolean performAction(GeneralInput consoleInput) {
+            cryptoServices.fileDecryption(consoleInput.getPath());
+            return false;
         }
     },
     CLOSE_PROGRAM {
         @Override
-        public void performAction(Input inputOptions) {
-            Input.scanner.close();
-            System.exit(0);
+        public boolean performAction(GeneralInput consoleInput) {
+            return true;
         }
     };
 
-    static final CryptoUtils cryptoOptions = new CryptoUtils();
+    static final CryptoServices cryptoServices = new CryptoServices();
 
 
     /**
@@ -40,6 +40,7 @@ public enum Choice {
 
     /**
      * An abstract method that can do everything, depending on the user choice in the menu.
+     * @return A flag mention if the CLOSE_PROGRAM option was chosen or not.
      */
-    public abstract void performAction(Input inputOptions);
+    public abstract boolean performAction(GeneralInput consoleInput);
 }
