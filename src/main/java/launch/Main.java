@@ -5,8 +5,11 @@ import consoleUI.Input;
 
 public class Main {
     public static void main(String[] args) {
+        CastingValidation castOptions = new CastingValidation();
+        Input inputOptions = new Input();
+
         Menu.startMenu();
-        CastingValidation.fromIntToChoice(Input.integerInput()).performAction();
+        castOptions.fromIntToChoice(inputOptions.integerInput()).performAction(inputOptions);
         Input.scanner.close();
     }
 

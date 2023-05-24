@@ -27,6 +27,8 @@ public class CryptoUtils {
      */
     public void processFile(Path fileToProcess, boolean encryptFlag) {
         CaesarEncryptor caesarOptions;
+        FileUtils fileOptions = new FileUtils();
+        Input inputOptions = new Input();
         int key;
 
         if (encryptFlag) {
@@ -37,15 +39,15 @@ public class CryptoUtils {
         }
 
         else {
-            key = Input.inputKey();
+            key = inputOptions.inputKey();
             caesarOptions = new CaesarEncryptor(key);
         }
 
-        String dataToProcess = FileUtils.readFileToStr(fileToProcess);
+        String dataToProcess = fileOptions.readFileToStr(fileToProcess);
         String processedData = caesarOptions.processString(dataToProcess, key, encryptFlag);
 
         Path newPath = encryptFlag ? getNewFilePath(fileToProcess, HelpConstants.ENCRYPTED_FILE_EXTENSION) :
                                      getNewFilePath(fileToProcess, HelpConstants.DECRYPTED_FILE_EXTENSION);
-        FileUtils.writeStrToFile(newPath, processedData);
+        fileOptions.writeStrToFile(newPath, processedData);
     }
 }

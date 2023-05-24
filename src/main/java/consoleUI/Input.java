@@ -1,10 +1,10 @@
 package consoleUI;
-
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
 import org.apache.commons.lang3.math.NumberUtils;
+import org.jetbrains.annotations.NotNull;
 
 public class Input {
 
@@ -15,7 +15,7 @@ public class Input {
      * Input a number in a safe way. take it like a string and then convert it.
      * @return The number the user entered as an integer type.
      */
-    public static int integerInput() {
+    public int integerInput() {
         String selection = scanner.nextLine();
 
         while (!NumberUtils.isParsable(selection)) {
@@ -31,7 +31,7 @@ public class Input {
      * Input an exist file path, and returns it if it's proper.
      * @return The path the user entered.
      */
-    public static Path pathInput() {
+    public @NotNull Path pathInput() {
         Path path;
 
         System.out.println(HelpConstants.TAKE_PATH);
@@ -55,7 +55,7 @@ public class Input {
      * Input a key needed for decryption a file.
      * @return The key the user entered.
      */
-    public static int inputKey() {
+    public int inputKey() {
         System.out.println(HelpConstants.TAKE_KEY);
         return integerInput();
     }

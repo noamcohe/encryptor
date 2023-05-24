@@ -7,19 +7,19 @@ import java.time.temporal.ValueRange;
 public enum Choice {
     ENCRYPTION {
         @Override
-        public void performAction() {
-            cryptoOptions.processFile(Input.pathInput(), HelpConstants.ENCRYPTION_FLAG);
+        public void performAction(Input inputOptions) {
+            cryptoOptions.processFile(inputOptions.pathInput(), HelpConstants.ENCRYPTION_FLAG);
         }
     },
     DECRYPTION {
         @Override
-        public void performAction() {
-            cryptoOptions.processFile(Input.pathInput(), HelpConstants.DECRYPTION_FLAG);
+        public void performAction(Input inputOptions) {
+            cryptoOptions.processFile(inputOptions.pathInput(), HelpConstants.DECRYPTION_FLAG);
         }
     },
     CLOSE_PROGRAM {
         @Override
-        public void performAction() {
+        public void performAction(Input inputOptions) {
             Input.scanner.close();
             System.exit(0);
         }
@@ -41,5 +41,5 @@ public enum Choice {
     /**
      * An abstract method that can do everything, depending on the user choice in the menu.
      */
-    public abstract void performAction();
+    public abstract void performAction(Input inputOptions);
 }
