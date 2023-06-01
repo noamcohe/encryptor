@@ -1,11 +1,9 @@
 package consoleUI;
-import org.jetbrains.annotations.NotNull;
 import java.nio.file.Path;
-import enums.Choice;
 
 public interface GeneralInput {
     int getInt();
-    @NotNull Path getPath();
+    Path getPath(String message);
     int getKey();
-    Choice getChoice();
+    int getNumByRange(int range);
 }
