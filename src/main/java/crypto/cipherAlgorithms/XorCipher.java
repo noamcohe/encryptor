@@ -11,11 +11,11 @@ public class XorCipher extends Cipher {
      */
     private String encDec(String data) {
         StringBuilder encDecData = new StringBuilder();
-        char endDecChar;
+        char encDecChar;
 
         for (char ch : data.toCharArray()) {
-            endDecChar = (char) (ch ^ key());
-            encDecData.append(endDecChar);
+            encDecChar = (char) (ch ^ key());
+            encDecData.append(encDecChar);
         }
 
         return encDecData.toString();
@@ -41,10 +41,13 @@ public class XorCipher extends Cipher {
                 %s%d
                 %s%s
                 %s%s
+                %s%b
+                
                 """.formatted(Constants.XOR_NAME,
                 Constants.ENC_NAME, encryptionFlag(),
                 Constants.KEY_MESSAGE, key(),
                 Constants.INPUT_FILE, sourceFilePath(),
-                Constants.OUTPUT_FILE, destFilePath());
+                Constants.OUTPUT_FILE, destFilePath(),
+                Constants.IS_SUCCEEDED, isSucceeded());
     }
 }

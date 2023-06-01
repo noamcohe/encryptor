@@ -38,13 +38,16 @@ public class ReverseCipher extends Cipher {
                 %s%d
                 %s%s
                 %s%s
+                %s%b
                 
                 %s
+                
                 """.formatted(Constants.REVERSE_NAME,
                 Constants.ENC_NAME, encryptionFlag(),
                 Constants.KEY_MESSAGE, key(),
                 Constants.INPUT_FILE, sourceFilePath(),
                 Constants.OUTPUT_FILE, destFilePath(),
+                Constants.IS_SUCCEEDED, isSucceeded(),
                 innerCipher());
     }
 }

@@ -4,6 +4,7 @@ import consoleUI.GeneralInput;
 import crypto.CryptoServices;
 import crypto.cipherAlgorithms.*;
 import utils.Constants;
+import utils.ErrorMessage;
 import utils.FileUtils;
 
 import java.util.HashMap;
@@ -82,12 +83,7 @@ public class CiphersMenu implements MenuChoice<Void> {
 
             System.out.println(Constants.START_ENC);
             cipherDetails = cryptoServices.fileEncryption(cipher);
-
-            if (!cipher.isSucceeded()) {
-                System.out.println(Constants.WRITING_ERROR);
-            } else {
-                System.out.println(Constants.END_ENC);
-            }
+            System.out.println(Constants.END_ENC);
 
         } else {
             cipher.sourceFilePath(consoleInput.getPath(Constants.TAKE_PATH_FOR_DECRYPTION));
@@ -96,16 +92,13 @@ public class CiphersMenu implements MenuChoice<Void> {
 
             System.out.println(Constants.START_DEC);
             cipherDetails = cryptoServices.fileDecryption(cipher);
-
-            if (!cipher.isSucceeded()) {
-                System.out.println(Constants.WRITING_ERROR);
-            } else {
-                System.out.println(Constants.END_DEC);
-            }
+            System.out.println(Constants.END_DEC);
         }
 
-        if (cipher.isSucceeded()) {
-            System.out.println(cipherDetails);
+        System.out.println(cipherDetails);
+
+        if (!cipher.isSucceeded()) {
+            ErrorMessage.display();
         }
     }
 

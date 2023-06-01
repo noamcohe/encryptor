@@ -73,11 +73,14 @@ public class MultiplicationCipher extends Cipher {
                 %s%d
                 %s%s
                 %s%s
+                %s%b
+                
                 """.formatted(Constants.MULTIPLICATION_NAME,
                 Constants.ENC_NAME, encryptionFlag(),
                 Constants.KEY_MESSAGE, key(),
                 Constants.DEC_KEY, decryptionKey(),
                 Constants.INPUT_FILE, sourceFilePath(),
-                Constants.OUTPUT_FILE, destFilePath());
+                Constants.OUTPUT_FILE, destFilePath(),
+                Constants.IS_SUCCEEDED, isSucceeded());
     }
 }

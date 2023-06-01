@@ -39,10 +39,13 @@ public class CaesarCipher extends Cipher {
                 %s%d
                 %s%s
                 %s%s
+                %s%b
+                
                 """.formatted(Constants.CAESAR_NAME,
                 Constants.ENC_NAME, encryptionFlag(),
                 Constants.KEY_MESSAGE, key(),
                 Constants.INPUT_FILE, sourceFilePath(),
-                Constants.OUTPUT_FILE, destFilePath());
+                Constants.OUTPUT_FILE, destFilePath(),
+                Constants.IS_SUCCEEDED, isSucceeded());
     }
 }

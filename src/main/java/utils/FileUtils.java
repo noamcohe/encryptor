@@ -12,7 +12,7 @@ public class FileUtils {
             byte[] bytes = Files.readAllBytes(filePath);
             return new String(bytes, StandardCharsets.UTF_8);
         } catch (IOException e) {
-            System.out.println(Constants.READING_ERROR);
+            ErrorMessage.data(Constants.READING_ERROR + e);
             return "";
         }
     }
@@ -24,6 +24,7 @@ public class FileUtils {
             Files.write(filePath, newData, StandardOpenOption.TRUNCATE_EXISTING);
             return true;
         } catch (IOException e) {
+            ErrorMessage.data(Constants.WRITING_ERROR + e);
             return false;
         }
     }

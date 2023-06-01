@@ -22,8 +22,8 @@ public class Constants {
     public static final String INPUT_FILE = "input file: ";
     public static final String OUTPUT_FILE = "output file: ";
     public static final String TAKE_KEY = "Enter the key you need:";
-    public static final String READING_ERROR = "Something gets wrong with file reading";
-    public static final String WRITING_ERROR = "Something gets wrong with file writing\n\n";
+    public static final String READING_ERROR = "FileUtils.read(Path) - Something gets wrong with file reading ";
+    public static final String WRITING_ERROR = "FileUtils.write(Path, byte[]) - Something gets wrong with file writing ";
     public static final String ENCRYPTED_FILE = ".encrypted";
     public static final String DECRYPTED_FILE = "_decrypted.txt";
     public static final int CHARACTERS_RANGE = 128;
@@ -34,8 +34,8 @@ public class Constants {
     public static final String ENC_NAME = "encryption: ";
     public static final String START_ENC = "Encryption process started!";
     public static final String START_DEC = "Decryption process started!";
-    public static final String END_ENC = "Encryption process has been completed successfully!";
-    public static final String END_DEC = "Decryption process has been completed successfully!";
+    public static final String END_ENC = "Encryption process is over.";
+    public static final String END_DEC = "Decryption process is over.";
     public static final String CHOOSE_INNER_CIPHER = "Please choose the cipher you want to reverse:";
     public static final String CAESAR_NAME = "CAESAR_CIPHER";
     public static final String XOR_NAME = "XOR_CIPHER";
@@ -45,8 +45,6 @@ public class Constants {
     public static final String XOR_DESC = "(2) -- XOR Cipher";
     public static final String MULTIPLICATION_DESC = "(3) -- Multiplication Cipher";
     public static final String REVERSE_DESC = "(4) -- Reverse Algorithm";
-    public static final String FILE_ALREADY_EXIST = """
-                                                       Destination file already Exist! the file writing failed!
-                                                       Please try to do that again:""";
+    public static final String IS_SUCCEEDED = "Succeeded: ";
 
 }

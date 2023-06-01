@@ -6,6 +6,7 @@ import java.time.temporal.ValueRange;
 import java.util.Scanner;
 import org.apache.commons.lang3.math.NumberUtils;
 import utils.Constants;
+import utils.ErrorMessage;
 
 public class ConsoleInput implements GeneralInput {
 
@@ -21,7 +22,7 @@ public class ConsoleInput implements GeneralInput {
         String selection = scanner.nextLine();
 
         while (!NumberUtils.isParsable(selection)) {
-            System.out.println(Constants.INVALID_NUM);
+            ErrorMessage.display(Constants.INVALID_NUM);
             selection = scanner.nextLine();
         }
 
@@ -44,10 +45,8 @@ public class ConsoleInput implements GeneralInput {
             path = Paths.get(scanner.nextLine());
 
             if (!Files.isRegularFile(path)) {
-                System.out.println(Constants.INVALID_PATH);
-            }
-
-            else {
+                ErrorMessage.display(Constants.INVALID_PATH);
+            } else {
                 return path;
             }
         }
@@ -78,7 +77,7 @@ public class ConsoleInput implements GeneralInput {
         int userNum = getInt();
 
         while (!ValueRange.of(1, range).isValidIntValue(userNum)) {
-            System.out.println(Constants.INVALID_RANGE);
+            ErrorMessage.display(Constants.INVALID_RANGE);
             userNum = getInt();
         }
 
