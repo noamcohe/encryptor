@@ -1,28 +1,24 @@
-package consoleUI;
+package userInput;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.temporal.ValueRange;
 import java.util.Scanner;
 import org.apache.commons.lang3.math.NumberUtils;
-import utils.Constants;
-import utils.ErrorMessage;
+import utils.programLogger;
+import static utils.Constants.*;
 
 public class ConsoleInput implements GeneralInput {
 
     public static Scanner scanner = new Scanner(System.in);
 
 
-    /**
-     * Input a number in a safe way. take it like a string and then convert it.
-     * @return The number the user entered as an integer type.
-     */
     @Override
     public int getInt() {
         String selection = scanner.nextLine();
 
         while (!NumberUtils.isParsable(selection)) {
-            ErrorMessage.display(Constants.INVALID_NUM);
+            programLogger.display(INVALID_NUM);
             selection = scanner.nextLine();
         }
 
@@ -45,7 +41,7 @@ public class ConsoleInput implements GeneralInput {
             path = Paths.get(scanner.nextLine());
 
             if (!Files.isRegularFile(path)) {
-                ErrorMessage.display(Constants.INVALID_PATH);
+                programLogger.display(INVALID_PATH);
             } else {
                 return path;
             }
@@ -54,30 +50,12 @@ public class ConsoleInput implements GeneralInput {
     }
 
 
-    /**
-     * Input a key needed for decryption a file.
-     * @return The key the user entered.
-     */
-    @Override
-    public int getKey() {
-        System.out.println(Constants.TAKE_KEY);
-        return getInt();
-    }
-
-
-    /**
-     * Input a choice enum in a safe way. take it like an int,
-     * After that make sure if it's in 'Choice' enum range -
-     * And then convert it.
-     *
-     * @return The user choice as a 'Choice' enum type.
-     */
     @Override
     public int getNumByRange(int range) {
         int userNum = getInt();
 
         while (!ValueRange.of(1, range).isValidIntValue(userNum)) {
-            ErrorMessage.display(Constants.INVALID_RANGE);
+            programLogger.display(INVALID_RANGE);
             userNum = getInt();
         }
 

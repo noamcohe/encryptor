@@ -1,8 +1,9 @@
 package launch;
-import consoleUI.ConsoleInput;
+import userInput.ConsoleInput;
 import menus.MenuChoice;
 import menus.StartMenu;
-import utils.Constants;
+import utils.programLogger;
+import static utils.Constants.*;
 
 public class EncryptorProgram {
     public static void execute() {
@@ -11,10 +12,11 @@ public class EncryptorProgram {
 
 
         while (shouldExit.equals(false)) {
-            startMenu.display(Constants.START_MENU);
+            startMenu.display(START_MENU);
             shouldExit = StartMenu.getChoice().performAction();
         }
 
+        programLogger.info(END_PROGRAM);
         ConsoleInput.scanner.close();
     }
 }

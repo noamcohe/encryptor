@@ -1,9 +1,8 @@
-package consoleUI;
+package userInput;
 import java.nio.file.Path;
 
 public interface GeneralInput {
     int getInt();
     Path getPath(String message);
-    int getKey();
     int getNumByRange(int range);
 }

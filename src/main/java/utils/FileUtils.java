@@ -4,28 +4,27 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
+import static utils.Constants.*;
 
 public class FileUtils {
 
-    public String read(Path filePath) {
+    public byte[] read(Path filePath) {
+        byte[] data = new byte[0];
         try {
-            byte[] bytes = Files.readAllBytes(filePath);
-            return new String(bytes, StandardCharsets.UTF_8);
+            data = Files.readAllBytes(filePath);
         } catch (IOException e) {
-            ErrorMessage.data(Constants.READING_ERROR + e);
-            return "";
+            programLogger.error(READING_ERROR + e);
         }
+
+        return data;
     }
 
 
-    public boolean write(Path filePath, byte[] newData) {
+    public void write(Path filePath, byte[] dstFileData) {
         try {
-            Files.createFile(filePath);
-            Files.write(filePath, newData, StandardOpenOption.TRUNCATE_EXISTING);
-            return true;
-        } catch (IOException e) {
-            ErrorMessage.data(Constants.WRITING_ERROR + e);
-            return false;
+            Files.write(filePath, dstFileData, StandardOpenOption.TRUNCATE_EXISTING, StandardOpenOption.CREATE);
+        } catch (IOException | UnsupportedOperationException e) {
+            programLogger.error(WRITING_ERROR + e);
         }
     }
 

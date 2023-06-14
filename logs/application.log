@@ -1,0 +1,810 @@
+2023-06-09 15:33:55.441 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-09 15:33:55.447 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-09 15:33:55.447 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 4
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 125
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 47
+
+2023-06-09 15:35:25.160 [main] INFO  utils.programLogger - Decryption process is started.
+2023-06-09 15:35:25.166 [main] INFO  utils.programLogger - Decryption process is over.
+2023-06-09 15:35:25.166 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: false
+Your key: 4
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: false
+Your key: 125
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: false
+Your key: 47
+
+2023-06-09 15:36:17.833 [main] INFO  utils.programLogger - The program was ended.
+2023-06-09 16:10:51.124 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-09 16:10:51.128 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-09 16:10:51.130 [main] INFO  utils.programLogger - Elapsed time: 438 milliseconds
+2023-06-09 16:10:51.131 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 90
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 89
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 35
+
+2023-06-09 16:13:02.982 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-09 16:13:02.985 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-09 16:13:02.987 [main] INFO  utils.programLogger - Elapsed time: 0 seconds
+2023-06-09 16:13:02.988 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 40
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 85
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 29
+
+2023-06-09 16:14:16.030 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-09 16:14:16.033 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-09 16:14:16.036 [main] INFO  utils.programLogger - Elapsed time: 503 milliseconds
+2023-06-09 16:14:16.037 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 47
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 19
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 59
+
+2023-06-09 16:14:22.345 [main] INFO  utils.programLogger - The program was ended.
+2023-06-11 14:01:46.405 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:01:46.406 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.FileNotFoundException: C:\checkCAESAR_CIPHER_key.bin (Access is denied)
+2023-06-11 14:01:46.407 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:01:46.407 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:01:46.408 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.FileNotFoundException: C:\checkMULTIPLICATIVE_CIPHER_key.bin (Access is denied)
+2023-06-11 14:01:46.408 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:01:46.410 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:01:46.410 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.FileNotFoundException: C:\checkXOR_CIPHER_key.bin (Access is denied)
+2023-06-11 14:01:46.410 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:01:46.431 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-11 14:01:46.434 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-11 14:01:46.438 [main] INFO  utils.programLogger - Elapsed time: 3 milliseconds
+2023-06-11 14:01:46.438 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 110
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 65
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 103
+
+2023-06-11 14:03:41.372 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:03:41.393 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:03:41.395 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:03:41.396 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:03:41.399 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:03:41.401 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:03:41.412 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-11 14:03:41.415 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-11 14:03:41.418 [main] INFO  utils.programLogger - Elapsed time: 4 milliseconds
+2023-06-11 14:03:41.419 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 29
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 127
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 103
+
+2023-06-11 14:04:42.882 [main] INFO  utils.programLogger - The program was ended.
+2023-06-11 14:14:20.620 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:14:20.643 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:14:20.644 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:14:20.646 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:14:20.648 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:14:20.649 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:14:20.661 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-11 14:14:20.663 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-11 14:14:20.667 [main] INFO  utils.programLogger - Elapsed time: 1 milliseconds
+2023-06-11 14:14:20.668 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 104
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 126
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 111
+
+2023-06-11 14:31:00.760 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:31:00.780 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:31:00.781 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:31:00.782 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:31:00.783 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:31:00.785 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:31:00.797 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-11 14:31:00.801 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-11 14:31:00.805 [main] INFO  utils.programLogger - Elapsed time: 3 milliseconds
+2023-06-11 14:31:00.806 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 54
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 70
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 31
+
+2023-06-11 14:32:01.048 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:32:01.049 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:32:01.049 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:32:01.050 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:32:01.050 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:32:01.051 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:32:01.051 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-11 14:32:01.052 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-11 14:32:01.052 [main] INFO  utils.programLogger - Elapsed time: 0 milliseconds
+2023-06-11 14:32:01.053 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 38
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 93
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 89
+
+2023-06-11 14:32:40.767 [main] INFO  utils.programLogger - The program was ended.
+2023-06-11 14:36:33.268 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:36:33.289 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.InvalidClassException: crypto.algorithms.ciphers.CaesarCipher; no valid constructor
+2023-06-11 14:36:33.290 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:38:40.537 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:40:00.303 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.InvalidClassException: crypto.algorithms.ciphers.CaesarCipher; no valid constructor
+2023-06-11 14:40:00.305 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:40:18.996 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:40:25.551 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.InvalidClassException: crypto.algorithms.ciphers.CaesarCipher; no valid constructor
+2023-06-11 14:40:25.553 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:41:15.082 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:41:15.102 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:41:15.103 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:41:15.104 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:41:15.107 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:41:15.109 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:41:15.120 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-11 14:41:15.123 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-11 14:41:15.126 [main] INFO  utils.programLogger - Elapsed time: 2 milliseconds
+2023-06-11 14:41:15.126 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 115
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 87
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 1
+
+2023-06-11 14:42:15.846 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:42:45.169 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.InvalidClassException: crypto.algorithms.ciphers.CaesarCipher; no valid constructor
+2023-06-11 14:42:45.171 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:56:36.905 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:56:36.928 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:56:36.929 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:56:36.930 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:56:36.932 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:56:36.933 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:56:36.939 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-11 14:56:36.942 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-11 14:56:36.945 [main] INFO  utils.programLogger - Elapsed time: 4 milliseconds
+2023-06-11 14:56:36.946 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 73
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 72
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 111
+
+2023-06-11 14:57:05.916 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:57:05.926 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.InvalidClassException: crypto.algorithms.ciphers.CaesarCipher; no valid constructor
+2023-06-11 14:57:05.926 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:58:09.181 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:58:09.202 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.InvalidClassException: crypto.algorithms.ciphers.CaesarCipher; no valid constructor
+2023-06-11 14:58:09.203 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 14:58:55.074 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 14:59:00.696 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.InvalidClassException: crypto.algorithms.ciphers.CaesarCipher; no valid constructor
+2023-06-11 14:59:00.702 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:03:41.328 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:03:50.969 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.InvalidClassException: crypto.algorithms.ciphers.CaesarCipher; no valid constructor
+2023-06-11 15:03:50.974 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:05:39.994 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:06:32.891 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.InvalidClassException: crypto.algorithms.ciphers.CaesarCipher; no valid constructor
+2023-06-11 15:06:32.897 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:07:14.354 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:07:23.637 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.InvalidClassException: crypto.algorithms.ciphers.CaesarCipher; no valid constructor
+2023-06-11 15:07:23.644 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:11:58.552 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:11:58.561 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:11:58.562 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:11:58.562 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:11:58.564 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:11:58.564 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:11:58.573 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-11 15:11:58.579 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-11 15:11:58.582 [main] INFO  utils.programLogger - Elapsed time: 6 milliseconds
+2023-06-11 15:11:58.583 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 112
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 50
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 63
+
+2023-06-11 15:12:53.562 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:12:53.568 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:12:53.569 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:12:53.569 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:12:53.571 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:12:53.572 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:12:53.580 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-11 15:12:53.586 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-11 15:12:53.590 [main] INFO  utils.programLogger - Elapsed time: 6 milliseconds
+2023-06-11 15:12:53.590 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 120
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 9
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 51
+
+2023-06-11 15:13:17.512 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:14:11.627 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:14:28.614 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:19:02.604 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:19:10.726 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.FileNotFoundException: C:\check\CAESAR_CIPHER_key.bin (The system cannot find the file specified)
+2023-06-11 15:19:10.732 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:19:29.163 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:19:29.169 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:19:29.169 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:19:29.172 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:19:29.175 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:19:29.176 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:19:29.183 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-11 15:19:29.188 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-11 15:19:29.192 [main] INFO  utils.programLogger - Elapsed time: 5 milliseconds
+2023-06-11 15:19:29.193 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 16
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 120
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 65
+
+2023-06-11 15:19:56.324 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:20:06.572 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:21:41.029 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:21:47.438 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:33:20.001 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:34:04.466 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:34:04.474 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:34:04.475 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:34:04.479 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:34:04.481 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:34:04.482 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:34:04.492 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-11 15:34:04.497 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-11 15:34:04.500 [main] INFO  utils.programLogger - Elapsed time: 6 milliseconds
+2023-06-11 15:34:04.501 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 120
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 106
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 3
+
+2023-06-11 15:34:16.983 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:34:57.146 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:34:57.168 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:34:57.170 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:34:57.172 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:34:57.175 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:34:57.176 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:34:57.184 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-11 15:34:57.188 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-11 15:34:57.192 [main] INFO  utils.programLogger - Elapsed time: 3 milliseconds
+2023-06-11 15:34:57.192 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 68
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 98
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 103
+
+2023-06-11 15:35:18.215 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:35:18.226 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 15:36:12.130 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 15:36:23.754 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 16:03:25.635 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 16:03:25.658 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 16:03:25.659 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 16:03:25.661 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 16:03:25.665 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 16:03:25.666 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 16:03:25.672 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-11 16:03:25.676 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-11 16:03:25.680 [main] INFO  utils.programLogger - Elapsed time: 4 milliseconds
+2023-06-11 16:03:25.680 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 51
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 23
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+decryption key: 37
+
+2023-06-11 16:04:00.936 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 16:04:00.944 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 16:04:00.944 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 16:04:00.945 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 16:04:26.062 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 16:04:26.063 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 16:04:26.064 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 16:04:26.066 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 16:04:39.301 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 16:04:39.302 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 16:04:39.302 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-11 16:04:39.303 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-11 16:04:39.303 [main] INFO  utils.programLogger - Decryption process is started.
+2023-06-11 16:04:39.305 [main] INFO  utils.programLogger - Decryption process is over.
+2023-06-11 16:04:39.305 [main] INFO  utils.programLogger - Elapsed time: 1 milliseconds
+2023-06-11 16:04:39.306 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: false
+Your key: 51
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: false
+Your key: 23
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: false
+Your key: 45
+
+2023-06-12 13:37:10.239 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-12 13:37:10.262 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-12 13:37:10.263 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-12 13:37:10.264 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-12 13:37:10.268 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-12 13:37:10.269 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-12 13:37:10.278 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-12 13:37:10.281 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-12 13:37:10.285 [main] INFO  utils.programLogger - Elapsed time: 3 milliseconds
+2023-06-12 13:37:10.286 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: true
+Your key: 92
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: true
+Your key: 105
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: true
+Your key: 99
+
+2023-06-12 13:37:40.547 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-12 13:37:40.556 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-12 13:37:40.556 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-12 13:37:40.557 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-12 13:37:52.826 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-12 13:37:52.827 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-12 13:37:52.827 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-12 13:37:52.828 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-12 13:38:01.289 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-12 13:38:01.290 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-12 13:38:01.291 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-12 13:38:01.292 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-12 13:38:01.292 [main] INFO  utils.programLogger - Decryption process is started.
+2023-06-12 13:38:01.294 [main] INFO  utils.programLogger - Decryption process is over.
+2023-06-12 13:38:01.295 [main] INFO  utils.programLogger - Elapsed time: 3 milliseconds
+2023-06-12 13:38:01.296 [main] TRACE utils.programLogger - 
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+XOR_CIPHER
+encryption: false
+Your key: 92
+
+
+The second cipher executed:
+
+REVERSE_ALGORITHM
+Inner cipher:
+
+DOUBLE_ALGORITHM
+The first cipher executed:
+
+CAESAR_CIPHER
+encryption: false
+Your key: 105
+
+
+The second cipher executed:
+
+MULTIPLICATIVE_CIPHER
+encryption: false
+Your key: 75
+

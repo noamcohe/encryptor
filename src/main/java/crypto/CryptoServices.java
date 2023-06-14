@@ -1,33 +1,38 @@
 package crypto;
-import crypto.cipherAlgorithms.Cipher;
-import utils.Constants;
+import crypto.algorithms.Algorithm;
 import utils.FileUtils;
 
-public class CryptoServices {
+import java.nio.file.Path;
+import static utils.Constants.*;
 
-    /**
-     * Doing all the general operations for encryption / decryption.
-     * Get an encryption flag that tell's method if encryption is needed or decryption.
-     */
-    private String fileEncDec(Cipher cipher) {
+public class CryptoServices {
+    private final Path sourceFilePath;
+    private final Path destFilePath;
+
+    public CryptoServices(Path sourceFilePath, Path destFilePath) {
+        this.sourceFilePath = sourceFilePath;
+        this.destFilePath = destFilePath;
+    }
+
+
+    private void fileExecute(Algorithm algorithm, boolean encryptionFlag) {
         FileUtils fileUtils = new FileUtils();
 
-        String srcFileData = fileUtils.read(cipher.sourceFilePath());
+        byte[] srcFileData = fileUtils.read(sourceFilePath);
 
-        String destFileData = cipher.encryptionFlag() ?
-                cipher.encrypt(srcFileData) :
-                cipher.decrypt(srcFileData);
+        byte[] destFileData = encryptionFlag ?
+                algorithm.encrypt(srcFileData) :
+                algorithm.decrypt(srcFileData);
 
-        cipher.isSucceeded(fileUtils.write(cipher.destFilePath(), destFileData.getBytes()));
-        return cipher.toString();
+        fileUtils.write(destFilePath, destFileData);
     }
 
 
-    public String fileEncryption(Cipher cipher) {
-        return fileEncDec(cipher);
+    public void fileEncryption(Algorithm algorithm) {
+        fileExecute(algorithm, ENC_FLAG);
     }
 
-    public String  fileDecryption(Cipher cipher) {
-        return fileEncDec(cipher);
+    public void  fileDecryption(Algorithm algorithm) {
+        fileExecute(algorithm, DEC_FLAG);
     }
 }
