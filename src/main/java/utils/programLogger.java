@@ -13,8 +13,6 @@ public class programLogger {
         log.info(message);
     }
 
-    public static void trace(String message) {log.trace(message);}
-
     public static void display(String message) {
         System.out.println(message);
     }

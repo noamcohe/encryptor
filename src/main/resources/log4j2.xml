@@ -13,9 +13,5 @@
             <AppenderRef ref="ConsoleAppender" />
             <AppenderRef ref="FileAppender" />
         </Root>
-        <Root level="trace">
-            <AppenderRef ref="ConsoleAppender" />
-            <AppenderRef ref="FileAppender" />
-        </Root>
     </Loggers>
 </Configuration>

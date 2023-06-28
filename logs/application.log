@@ -808,3 +808,223 @@ MULTIPLICATIVE_CIPHER
 encryption: false
 Your key: 75
 
+2023-06-20 13:37:35.798 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-20 13:37:35.802 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-20 13:37:35.806 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-20 13:37:35.806 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-20 13:37:35.809 [main] INFO  utils.programLogger - Elapsed time: 532 milliseconds
+2023-06-20 13:38:01.885 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-20 13:38:01.891 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-20 13:38:01.892 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-20 13:38:01.892 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-20 13:38:01.893 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-20 13:38:01.893 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-20 13:38:01.893 [main] INFO  utils.programLogger - Decryption process is started.
+2023-06-20 13:38:01.895 [main] INFO  utils.programLogger - Decryption process is over.
+2023-06-20 13:38:01.895 [main] INFO  utils.programLogger - Elapsed time: 2 milliseconds
+2023-06-20 13:38:06.533 [main] INFO  utils.programLogger - The program was ended.
+2023-06-20 19:28:36.677 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-20 19:28:36.691 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-20 19:28:36.704 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-20 19:28:36.704 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-20 19:28:36.709 [main] INFO  utils.programLogger - Elapsed time: 978 milliseconds
+2023-06-20 19:28:54.487 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-20 19:28:54.494 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-20 19:28:54.494 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-20 19:28:54.495 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-20 19:28:54.495 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-20 19:28:54.495 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-20 19:28:54.495 [main] INFO  utils.programLogger - Decryption process is started.
+2023-06-20 19:28:54.498 [main] INFO  utils.programLogger - Decryption process is over.
+2023-06-20 19:28:54.499 [main] INFO  utils.programLogger - Elapsed time: 4 milliseconds
+2023-06-20 19:28:56.926 [main] INFO  utils.programLogger - The program was ended.
+2023-06-21 15:01:18.133 [pool-1-thread-3] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\2.txt
+2023-06-21 15:01:18.133 [pool-1-thread-6] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\5.txt
+2023-06-21 15:01:18.133 [pool-1-thread-5] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\4.txt
+2023-06-21 15:01:18.133 [pool-1-thread-2] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\10.txt
+2023-06-21 15:01:18.133 [pool-1-thread-7] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\6.txt
+2023-06-21 15:01:18.133 [pool-1-thread-8] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\7.txt
+2023-06-21 15:01:18.133 [pool-1-thread-1] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\1.txt
+2023-06-21 15:01:18.133 [pool-1-thread-4] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\3.txt
+2023-06-21 15:01:18.138 [pool-1-thread-8] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\8.txt
+2023-06-21 15:01:18.139 [pool-1-thread-8] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\9.txt
+2023-06-21 15:12:57.451 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:12:57.458 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:13:33.125 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:13:33.132 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:13:33.132 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:13:33.133 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:13:33.133 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:13:33.133 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:13:33.134 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:13:33.134 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:15:32.816 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:15:32.850 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:17:04.220 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:17:04.265 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:17:04.266 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:17:04.267 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:17:04.268 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:17:04.269 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:17:19.103 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:17:19.105 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:17:41.615 [pool-3-thread-1] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\decrypted\1.txt
+2023-06-21 15:17:41.616 [pool-3-thread-4] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\decrypted\3.txt
+2023-06-21 15:17:41.617 [pool-3-thread-8] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\decrypted\7.txt
+2023-06-21 15:17:41.615 [pool-3-thread-3] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\decrypted\2.txt
+2023-06-21 15:17:41.619 [pool-3-thread-8] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\decrypted\8.txt
+2023-06-21 15:17:41.617 [pool-3-thread-5] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\decrypted\4.txt
+2023-06-21 15:17:41.620 [pool-3-thread-8] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\decrypted\9.txt
+2023-06-21 15:17:41.617 [pool-3-thread-2] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\decrypted\10.txt
+2023-06-21 15:17:41.623 [pool-3-thread-7] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\decrypted\6.txt
+2023-06-21 15:17:41.623 [pool-3-thread-6] ERROR utils.programLogger - FileUtils.write(Path, byte[]) - Something gets wrong with file writing: java.nio.file.NoSuchFileException: C:\check\encrypted\decrypted\5.txt
+2023-06-21 15:18:10.972 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:18:10.994 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:18:10.998 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:18:10.998 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:18:11.000 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:18:11.001 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:18:26.091 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:18:26.092 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:21:08.716 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:21:08.721 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:21:43.161 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:21:43.197 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:28:22.508 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:28:22.513 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:28:43.549 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:28:43.554 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:28:43.555 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:28:43.556 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:28:43.556 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:28:43.557 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:28:43.559 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:28:43.559 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:35:45.168 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:35:45.173 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:36:11.982 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:36:11.987 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:36:11.988 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:36:11.988 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:36:11.988 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:36:11.989 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:36:11.991 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:36:11.991 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:36:50.204 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-21 15:36:50.206 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:36:50.207 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:36:50.207 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-21 15:36:50.212 [main] INFO  utils.programLogger - Elapsed time: 2 milliseconds
+2023-06-21 15:37:11.914 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:37:11.915 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:37:11.916 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:37:11.916 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:37:11.917 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:37:11.917 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:37:11.918 [main] INFO  utils.programLogger - Decryption process is started.
+2023-06-21 15:37:11.920 [main] INFO  utils.programLogger - Decryption process is over.
+2023-06-21 15:37:11.920 [main] INFO  utils.programLogger - Elapsed time: 2 milliseconds
+2023-06-21 15:37:34.936 [main] INFO  utils.programLogger - The program was ended.
+2023-06-21 15:38:13.043 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:38:13.047 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:38:16.547 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:38:16.548 [main] ERROR utils.programLogger - Something gets wrong with keys writing: java.io.FileNotFoundException: C:\key.bin (Access is denied)
+2023-06-21 15:38:16.549 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:39:20.768 [main] ERROR utils.programLogger - Something gets wrong with directory creating: java.nio.file.FileAlreadyExistsException: C:\check\encrypted
+2023-06-21 15:39:20.769 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:39:20.771 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:39:56.880 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:39:56.886 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-21 15:40:21.089 [main] ERROR utils.programLogger - Something gets wrong with directory creating: java.nio.file.FileAlreadyExistsException: C:\check\encrypted
+2023-06-21 15:40:21.090 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-21 15:40:21.092 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-22 11:39:05.008 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-22 11:39:05.010 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-22 11:39:05.014 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-22 11:39:05.014 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-22 11:39:05.016 [main] INFO  utils.programLogger - Elapsed time: 801 milliseconds
+2023-06-26 09:42:54.993 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-26 09:42:54.998 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-26 09:43:25.934 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-26 09:43:25.939 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-26 09:43:25.940 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-26 09:43:25.940 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-26 09:43:25.941 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-26 09:43:25.941 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-26 09:43:25.942 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-26 09:43:25.943 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-26 09:43:30.532 [main] INFO  utils.programLogger - The program was ended.
+2023-06-27 14:31:47.433 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-27 14:31:47.443 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-27 14:32:12.349 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-27 14:32:12.355 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-27 14:32:12.355 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-27 14:32:12.355 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-27 14:32:12.356 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-27 14:32:12.356 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-27 14:32:12.357 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-27 14:32:12.357 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-27 15:27:20.016 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-27 15:27:20.022 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-27 15:27:20.031 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-27 15:27:20.031 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-27 15:27:20.040 [main] INFO  utils.programLogger - Elapsed time: 1764 milliseconds
+2023-06-27 15:28:33.395 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-27 15:28:33.398 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-27 15:28:33.401 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-27 15:28:33.401 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-27 15:28:33.406 [main] INFO  utils.programLogger - Elapsed time: 1306 milliseconds
+2023-06-27 15:35:26.323 [main] INFO  utils.programLogger - Decryption process is started.
+2023-06-27 15:35:26.327 [main] INFO  utils.programLogger - Decryption process is over.
+2023-06-27 15:35:26.331 [main] INFO  utils.programLogger - Elapsed time: 1349 milliseconds
+2023-06-27 15:38:21.828 [main] INFO  utils.programLogger - Encryption process is started.
+2023-06-27 15:38:21.831 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-27 15:38:21.835 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-27 15:38:21.835 [main] INFO  utils.programLogger - Encryption process is over.
+2023-06-27 15:38:21.839 [main] INFO  utils.programLogger - Elapsed time: 1500 milliseconds
+2023-06-28 10:33:28.874 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 10:33:28.880 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-28 10:33:46.964 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 10:33:46.966 [main] ERROR utils.programLogger - Something gets wrong with keys reading: java.io.FileNotFoundException: C:\check (Access is denied)
+2023-06-28 15:12:19.288 [main] ERROR utils.programLogger - FileUtils.read(Path) - Something gets wrong with file reading: java.nio.file.NoSuchFileException: C:\check\notExist.txt
+2023-06-28 15:22:04.796 [main] ERROR utils.programLogger - FileUtils.read(Path) - Something gets wrong with file reading: java.nio.file.NoSuchFileException: C:\check\notExist.txt
+2023-06-28 15:28:48.502 [main] ERROR utils.programLogger - FileUtils.read(Path) - Something gets wrong with file reading: java.nio.file.NoSuchFileException: C:\check\notExist.txt
+2023-06-28 15:40:02.854 [main] ERROR utils.programLogger - FileUtils.read(Path) - Something gets wrong with file reading: java.nio.file.NoSuchFileException: C:\check\notExist.txt
+2023-06-28 15:41:12.914 [main] ERROR utils.programLogger - FileUtils.read(Path) - Something gets wrong with file reading: java.nio.file.NoSuchFileException: C:\check\notExist.txt
+2023-06-28 15:48:09.526 [main] ERROR utils.programLogger - FileUtils.read(Path) - Something gets wrong with file reading: java.nio.file.NoSuchFileException: C:\check\notExist.txt
+2023-06-28 15:58:13.733 [main] ERROR utils.programLogger - FileUtils.read(Path) - Something gets wrong with file reading: java.nio.file.NoSuchFileException: C:\check\notExist.txt
+2023-06-28 15:58:13.843 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 15:58:13.845 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-28 16:01:24.326 [main] ERROR utils.programLogger - FileUtils.read(Path) - Something gets wrong with file reading: java.nio.file.NoSuchFileException: C:\check\notExist.txt
+2023-06-28 16:01:24.432 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 16:01:24.434 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-28 16:01:24.436 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 16:01:24.438 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-28 16:04:33.880 [main] ERROR utils.programLogger - FileUtils.read(Path) - Something gets wrong with file reading: java.nio.file.NoSuchFileException: C:\check\notExist.txt
+2023-06-28 16:04:33.995 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 16:04:33.998 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-28 16:04:33.998 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 16:04:34.002 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-28 16:07:30.028 [main] ERROR utils.programLogger - FileUtils.read(Path) - Something gets wrong with file reading: java.nio.file.NoSuchFileException: C:\check\notExist.txt
+2023-06-28 16:07:30.154 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 16:07:30.156 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-28 16:07:30.158 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 16:07:30.162 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-28 16:08:57.658 [main] ERROR utils.programLogger - FileUtils.read(Path) - Something gets wrong with file reading: java.nio.file.NoSuchFileException: C:\check\notExist.txt
+2023-06-28 16:08:57.766 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 16:08:57.767 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-28 16:08:57.769 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 16:08:57.772 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-28 16:08:57.790 [main] ERROR utils.programLogger - Something gets wrong with taking the paths from directory: java.nio.file.NoSuchFileException: C:\check\notExist
+2023-06-28 16:11:21.623 [main] ERROR utils.programLogger - FileUtils.read(Path) - Something gets wrong with file reading: java.nio.file.NoSuchFileException: C:\check\notExist.txt
+2023-06-28 16:11:21.729 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 16:11:21.731 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-28 16:11:21.733 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 16:11:21.736 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-28 16:11:21.756 [main] ERROR utils.programLogger - Something gets wrong with taking the paths from directory: java.nio.file.NoSuchFileException: C:\check\notExist
+2023-06-28 16:12:49.247 [main] ERROR utils.programLogger - FileUtils.read(Path) - Something gets wrong with file reading: java.nio.file.NoSuchFileException: C:\check\notExist.txt
+2023-06-28 16:12:49.363 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 16:12:49.365 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-28 16:12:49.368 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-06-28 16:12:49.371 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
+2023-06-28 16:12:49.396 [main] ERROR utils.programLogger - Something gets wrong with taking the paths from directory: java.nio.file.NoSuchFileException: C:\check\notExist

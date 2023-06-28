@@ -6,9 +6,12 @@ import java.time.temporal.ValueRange;
 import java.util.Scanner;
 import org.apache.commons.lang3.math.NumberUtils;
 import utils.programLogger;
-import static utils.Constants.*;
 
 public class ConsoleInput implements GeneralInput {
+    final String INVALID_NUM = "It's not a number. Let's try again:";
+    final String INVALID_RANGE = "Your choice is out of the range. Let's try again:";
+    final String INVALID_PATH = "The path you entered is not valid, or not exist! Let's try again:";
+    final String INVALID_KEY_PATH = "The keys file path you entered is not valid, or not exist! Let's try again:";
 
     public static Scanner scanner = new Scanner(System.in);
 
@@ -26,13 +29,8 @@ public class ConsoleInput implements GeneralInput {
     }
 
 
-    /**
-     * Input an exist file path, and returns it if it's proper.
-     *
-     * @return The path the user entered.
-     */
     @Override
-    public Path getPath(String message) {
+    public Path getPath(String message, boolean isKeyFile) {
         Path path;
 
         System.out.println(message);
@@ -40,13 +38,18 @@ public class ConsoleInput implements GeneralInput {
         while (true) {
             path = Paths.get(scanner.nextLine());
 
-            if (!Files.isRegularFile(path)) {
+            if (isKeyFile) {
+                if (!Files.isRegularFile(path)) {
+                    programLogger.display(INVALID_KEY_PATH);
+                } else {
+                    return path;
+                }
+            } else if (!Files.isRegularFile(path) && !Files.isDirectory(path)) {
                 programLogger.display(INVALID_PATH);
             } else {
                 return path;
             }
         }
-
     }
 
 

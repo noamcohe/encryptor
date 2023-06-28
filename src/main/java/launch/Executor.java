@@ -1,6 +1,6 @@
 package launch;
 
-public class Launcher {
+public class Executor {
     public static void main(String[] args) {
         EncryptorProgram.execute();
     }

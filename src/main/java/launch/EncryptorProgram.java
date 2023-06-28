@@ -3,10 +3,16 @@ import userInput.ConsoleInput;
 import menus.MenuChoice;
 import menus.StartMenu;
 import utils.programLogger;
-import static utils.Constants.*;
 
 public class EncryptorProgram {
     public static void execute() {
+        final String START_MENU = """
+                Welcome to encryptor program!
+                Please enter the option number you would like to perform:
+                """;
+        final String END_PROGRAM = "The program was ended.";
+
+
         Object shouldExit = false;
         MenuChoice<Boolean> startMenu = new StartMenu();
 

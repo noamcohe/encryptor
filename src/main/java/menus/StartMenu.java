@@ -3,7 +3,7 @@ import crypto.algorithms.Algorithm;
 import crypto.algorithms.Cipher;
 import crypto.algorithms.DoubleAlgo;
 import crypto.algorithms.ReverseAlgo;
-import manager.AlgoManager;
+import crypto.AlgoManager;
 import userInput.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,6 +11,19 @@ import static utils.Constants.*;
 
 
 public class StartMenu implements MenuChoice<Boolean> {
+    final static String ENC_OPT_DESC = "(1) -- Encryption";
+    final static String DEC_OPT_DESC = "(2) -- Decryption";
+    final static String CLOSE_OPT_DESC = "(3) -- Close program";
+    final static int ENC_OPT = 1;
+    final static int DEC_OPT = 2;
+    final static int CLOSE_OPT = 3;
+    final static int XOR_KEY_INDEX = 0;
+    final static int CAESAR_KEY_INDEX = 1;
+    final static int MULTI_KEY_INDEX = 2;
+    final static boolean EXIT_PROGRAM = true;
+    final static boolean NOT_EXIT = false;
+
+
     public static final Map<Integer, StartMenu> menuChoices = new HashMap<>();
     private static final GeneralInput consoleInput = new ConsoleInput();
     private static AlgoManager algoManager;
@@ -30,7 +43,7 @@ public class StartMenu implements MenuChoice<Boolean> {
             @Override
             public Boolean performAction() {
                 algoManager = new AlgoManager(ENC_FLAG);
-                callAlgorithm(ENC_FLAG);
+                initAlgo();
                 return NOT_EXIT;
             }
         });
@@ -39,7 +52,7 @@ public class StartMenu implements MenuChoice<Boolean> {
             @Override
             public Boolean performAction() {
                 algoManager = new AlgoManager(DEC_FLAG);
-                callAlgorithm(DEC_FLAG);
+                initAlgo();
                 return NOT_EXIT;
             }
         });
@@ -57,12 +70,11 @@ public class StartMenu implements MenuChoice<Boolean> {
         return menuChoices.get(choiceIndex);
     }
 
-    public static void callAlgorithm(boolean encryptionFlag) {
+    public static void initAlgo() {
         // Double algorithm of: (Xor) && (Reverse of (Double of (Caesar && Multiplicative)))
 
         // Caesar:
-        String caesarName = encryptionFlag ? CAESAR_ENC : CAESAR_DEC;
-        Cipher caesarCipher = new Cipher(algoManager.getKey(caesarName, CAESAR_KEY_INDEX), caesarName);
+        Cipher caesarCipher = new Cipher(algoManager.getKey(CAESAR_NAME, CAESAR_KEY_INDEX), CAESAR_NAME);
 
         // Multiplicative:
         Cipher multiCipher = new Cipher(algoManager.getKey(MULTI_NAME, MULTI_KEY_INDEX), MULTI_NAME);
@@ -78,10 +90,10 @@ public class StartMenu implements MenuChoice<Boolean> {
 
 
         // Double Algorithm:
-        Algorithm doubleAlgorithm = new DoubleAlgo(xorCipher, reverseAlgo);
+        Algorithm doubleAlgo = new DoubleAlgo(xorCipher, reverseAlgo);
 
 
-        algoManager.performAlgorithm(doubleAlgorithm);
+        algoManager.execute(doubleAlgo);
     }
 
     @Override
