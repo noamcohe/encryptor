@@ -1,36 +1,39 @@
 package crypto;
+import com.google.inject.Inject;
 import crypto.algorithms.Algorithm;
 import utils.FileUtils;
 import java.nio.file.Path;
 import java.util.List;
 
 public class DirectoryCrypto implements Runnable {
-    private static final FileUtils fileUtils = new FileUtils();
-    private final List<Path> srcFilePaths;
-    private final Path dstDirect;
+    private final FileUtils fileUtils;
+    private final CryptoExecutor cryptoExecutor;
+
+    private final List<Path> sourceFilesList;
+    private final Path destPath;
     private final boolean encFlag;
     private final Algorithm algo;
 
-    public DirectoryCrypto(Algorithm algo, List<Path> srcFilePaths, Path dstDirect, boolean encFlag) {
-        this.algo = algo;
-        this.srcFilePaths = srcFilePaths;
-        this.dstDirect = dstDirect;
+    @Inject
+    public DirectoryCrypto(FileUtils fileUtils, CryptoExecutor cryptoExecutor, List<Path> sourceFilesList, Path destPath, boolean encFlag, Algorithm algo) {
+        this.fileUtils = fileUtils;
+        this.cryptoExecutor = cryptoExecutor;
+        this.sourceFilesList = sourceFilesList;
+        this.destPath = destPath;
         this.encFlag = encFlag;
+        this.algo = algo;
     }
 
     @Override
     public void run() {
-        List<Path> destFilePaths = fileUtils.updateFilePaths(srcFilePaths, dstDirect);
+        List<Path> destFilesList = fileUtils.updateFilePaths(sourceFilesList, destPath);
 
-        for (int i = 0; i < srcFilePaths.size(); i++) {
-            CryptoExecutor cryptoExecutor = new FileExecutor(srcFilePaths.get(i), destFilePaths.get(i));
-
+        for (int i = 0; i < sourceFilesList.size(); i++) {
             if (encFlag) {
-                cryptoExecutor.encryption(algo);
+                cryptoExecutor.encryption(algo, sourceFilesList.get(i), destFilesList.get(i));
             } else {
-                cryptoExecutor.decryption(algo);
+                cryptoExecutor.decryption(algo, sourceFilesList.get(i), destFilesList.get(i));
             }
         }
-
     }
 }

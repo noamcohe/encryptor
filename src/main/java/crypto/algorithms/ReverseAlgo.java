@@ -1,16 +1,19 @@
 package crypto.algorithms;
+import com.google.inject.Inject;
 
-public record ReverseAlgo(Algorithm innerAlgo) implements Algorithm {
+public record ReverseAlgo(@Inject Algorithm inner) implements Algorithm {
     @Override
     public byte[] encrypt(byte[] data) {
-        return innerAlgo().decrypt(data);
+        return inner.decrypt(data);
     }
+
     @Override
     public byte[] decrypt(byte[] data) {
-        return innerAlgo().encrypt(data);
+        return inner.encrypt(data);
     }
+
     @Override
     public String key() {
-        return innerAlgo.key();
+        return inner.key();
     }
 }

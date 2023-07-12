@@ -1028,3 +1028,5 @@ Your key: 75
 2023-06-28 16:12:49.368 [main] INFO  utils.programLogger - Algorithm keys writing is started.
 2023-06-28 16:12:49.371 [main] INFO  utils.programLogger - Algorithm keys writing is ended.
 2023-06-28 16:12:49.396 [main] ERROR utils.programLogger - Something gets wrong with taking the paths from directory: java.nio.file.NoSuchFileException: C:\check\notExist
+2023-07-12 09:47:43.835 [main] INFO  utils.programLogger - Algorithm keys writing is started.
+2023-07-12 09:47:43.842 [main] INFO  utils.programLogger - Algorithm keys writing is ended.

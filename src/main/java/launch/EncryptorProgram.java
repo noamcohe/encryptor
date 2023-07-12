@@ -1,28 +1,27 @@
 package launch;
-import userInput.ConsoleInput;
+import com.google.inject.Injector;
+import com.google.inject.Key;
+import guice.EncryptorModule;
 import menus.MenuChoice;
-import menus.StartMenu;
+import com.google.inject.Guice;
+import userInput.GeneralInput;
 import utils.programLogger;
+import java.util.function.Function;
 
 public class EncryptorProgram {
-    public static void execute() {
-        final String START_MENU = """
-                Welcome to encryptor program!
-                Please enter the option number you would like to perform:
-                """;
+    public void execute() {
         final String END_PROGRAM = "The program was ended.";
 
+        boolean shouldExit = false;
+        Injector injector = Guice.createInjector(new EncryptorModule());
+        var startMenu = injector.getInstance(new Key<MenuChoice<Function<Void, Boolean>>>() {});
 
-        Object shouldExit = false;
-        MenuChoice<Boolean> startMenu = new StartMenu();
-
-
-        while (shouldExit.equals(false)) {
-            startMenu.display(START_MENU);
-            shouldExit = StartMenu.getChoice().performAction();
+        while (!shouldExit) {
+            startMenu.display();
+            shouldExit = startMenu.getChoice().apply(null);
         }
 
         programLogger.info(END_PROGRAM);
-        ConsoleInput.scanner.close();
+        injector.getInstance(GeneralInput.class).close();
     }
 }

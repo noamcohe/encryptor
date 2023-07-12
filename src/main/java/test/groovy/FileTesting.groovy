@@ -166,7 +166,7 @@ class FileTesting extends Specification {
         def updatedFilePaths = fileUtils.updateFilePaths(filePaths, newDirectory)
 
         then:
-        // check if the directory path is updated correctly
+        // Check if the directory path is updated correctly
         updatedFilePaths.every { it.startsWith(newDirectory) }
     }
 

@@ -1,14 +1,14 @@
 package utils;
+import com.google.inject.Singleton;
 import crypto.algorithms.Algorithm;
-
 import java.io.*;
-import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 
+@Singleton
 public class FileUtils {
     final String READING_ERROR = "FileUtils.read(Path) - Something gets wrong with file reading: ";
     final String WRITING_ERROR = "FileUtils.write(Path, byte[]) - Something gets wrong with file writing: ";
@@ -48,8 +48,8 @@ public class FileUtils {
         programLogger.info(START_WRITING_KEY);
 
         try {
-            FileOutputStream fileOut = new FileOutputStream(destPath);
-            ObjectOutputStream keys = new ObjectOutputStream(fileOut);
+            var fileOut = new FileOutputStream(destPath);
+            var keys = new ObjectOutputStream(fileOut);
 
             keys.writeObject(algo.key());
 
@@ -68,8 +68,8 @@ public class FileUtils {
         byte[] keysArray = new byte[0];
 
         try {
-            FileInputStream fileIn = new FileInputStream(filePath);
-            ObjectInputStream in = new ObjectInputStream(fileIn);
+            var fileIn = new FileInputStream(filePath);
+            var in = new ObjectInputStream(fileIn);
 
             String[] keysList = ((String) in.readObject()).split("\\|");
 
@@ -93,17 +93,17 @@ public class FileUtils {
     }
 
 
-    public Path changeSuffix(String oldPath, String newExtension) {
+    public Path changeSuffix(String oldPath, String newSuffix) {
         String fileBaseName = oldPath.substring(0, oldPath.lastIndexOf('.'));
 
-        return Path.of((fileBaseName + newExtension));
+        return Path.of((fileBaseName + newSuffix));
     }
 
 
     public List<Path> getFilePaths(Path directoryPath) {
         try {
-            DirectoryStream<Path> directoryObjects = Files.newDirectoryStream(directoryPath);
-            List<Path> filePaths = new ArrayList<>();
+            var directoryObjects = Files.newDirectoryStream(directoryPath);
+            var filePaths = new ArrayList<Path>();
 
             for (Path path : directoryObjects) {
                 if (Files.isRegularFile(path)) {
@@ -120,7 +120,7 @@ public class FileUtils {
 
 
     public List<Path> updateFilePaths(List<Path> filePaths, Path newDirectory) {
-        List<Path> updatedFilePaths = new ArrayList<>();
+        var updatedFilePaths = new ArrayList<Path>();
 
         for (Path singleFilePath : filePaths) {
             Path fileName = singleFilePath.getFileName();

@@ -1,12 +1,13 @@
 package crypto.algorithms;
+import com.google.inject.Inject;
 
-public record DoubleAlgo(Algorithm firstInnerAlgo, Algorithm secondInnerAlgo) implements Algorithm {
+public record DoubleAlgo(@Inject Algorithm firstInner, @Inject Algorithm secondInner) implements Algorithm {
     @Override
-    public byte[] encrypt(byte[] data) {return (secondInnerAlgo().encrypt(firstInnerAlgo().encrypt(data)));}
-
-    @Override
-    public byte[] decrypt(byte[] data) {return (firstInnerAlgo().decrypt(secondInnerAlgo().decrypt(data)));}
+    public byte[] encrypt(byte[] data) {return (secondInner.encrypt(firstInner.encrypt(data)));}
 
     @Override
-    public String key() {return "%s|%s".formatted(firstInnerAlgo.key(), secondInnerAlgo.key());}
+    public byte[] decrypt(byte[] data) {return (firstInner.decrypt(secondInner.decrypt(data)));}
+
+    @Override
+    public String key() {return "%s|%s".formatted(firstInner.key(), secondInner.key());}
 }

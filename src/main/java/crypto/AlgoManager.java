@@ -1,93 +1,48 @@
 package crypto;
-import userInput.*;
-import crypto.algorithms.*;
-import utils.programLogger;
+import com.google.inject.Inject;
+import crypto.algorithms.Algorithm;
 import utils.FileUtils;
-
-import java.nio.file.Files;
+import utils.programLogger;
 import java.nio.file.Path;
-import static utils.Constants.*;
 import java.time.Clock;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class AlgoManager {
-    final String TAKE_PATH_FOR_ENC = "Please enter the path of the file / directory you want to encrypt:";
-    final String TAKE_PATH_FOR_DEC = "Please enter the path of the file / directory you want to decrypt:";
-    final String ENC_FILE_EXTENSION = ".encrypted";
-    final String DEC_FILE_EXTENSION = "_decrypted.txt";
-    final String KEY_FILE_NAME = "key.bin";
-    final Path ENC_DIRECTORY_PATH = Path.of("encrypted");
-    final Path DEC_DIRECTORY_PATH = Path.of("decrypted");
     final String ENC_START = "Encryption process is started.";
     final String DEC_START = "Decryption process is started.";
     final String END_ENC_MESSAGE = "Encryption process is over.";
     final String END_DEC_MESSAGE = "Decryption process is over.";
     final String ELAPSED_TIME = "Elapsed time: ";
     final String MILLISECONDS = " milliseconds";
-    final String GET_KEY_FILE = "Please enter the key file path:";
-    final boolean IS_NOT_KEYS_FILE = false;
-    final boolean IS_KEYS_FILE = true;
 
 
-    private static final GeneralInput consoleInput = new ConsoleInput();
-    private static final FileUtils fileUtils = new FileUtils();
-    private final boolean encryptionFlag;
-    private final boolean isFile;
-    private final Path sourcePath;
-    private final Path destPath;
-    private final String keysFilePath;
+    private final FileUtils fileUtils;
+    private final CryptoExecutor cryptoExecutor;
 
-
-    public AlgoManager(boolean encryptionFlag) {
-        this.encryptionFlag = encryptionFlag;
-
-        if (encryptionFlag) {
-            sourcePath = consoleInput.getPath(TAKE_PATH_FOR_ENC, IS_NOT_KEYS_FILE);
-            isFile = Files.isRegularFile(sourcePath);
-
-            if (isFile) {
-                destPath = fileUtils.changeSuffix(sourcePath.toString(), ENC_FILE_EXTENSION);
-                keysFilePath = sourcePath.getParent() + "\\" + KEY_FILE_NAME;
-            } else {
-                destPath = sourcePath.resolve(ENC_DIRECTORY_PATH);
-                keysFilePath = sourcePath + "\\" + KEY_FILE_NAME;
-            }
-        }
-
-        else {
-            sourcePath = consoleInput.getPath(TAKE_PATH_FOR_DEC, IS_NOT_KEYS_FILE);
-            isFile = Files.isRegularFile(sourcePath);
-            keysFilePath = consoleInput.getPath(GET_KEY_FILE, IS_KEYS_FILE).toString();
-
-            if (isFile) {
-                destPath = fileUtils.changeSuffix(sourcePath.toString(), DEC_FILE_EXTENSION);
-            } else {
-                destPath = sourcePath.resolve(DEC_DIRECTORY_PATH);
-            }
-        }
+    @Inject
+    public AlgoManager(FileUtils fileUtils, CryptoExecutor cryptoExecutor) {
+        this.fileUtils = fileUtils;
+        this.cryptoExecutor = cryptoExecutor;
     }
 
 
-    private void file(Algorithm algo) {
-        CryptoExecutor cryptoExecutor = new FileExecutor(sourcePath, destPath);
-
+    private void file(Algorithm algo, Details details) {
         Clock clock = Clock.systemDefaultZone();
         Instant start = clock.instant();
 
-        if (encryptionFlag) {
+        if (details.encFlag()) {
             programLogger.info(ENC_START);
-            cryptoExecutor.encryption(algo);
-            fileUtils.serializeWriting(algo, keysFilePath);
+            cryptoExecutor.encryption(algo, details.sourcePath(), details.destPath());
+            fileUtils.serializeWriting(algo, details.keysFilePath());
             programLogger.info(END_ENC_MESSAGE);
 
         } else {
             programLogger.info(DEC_START);
-            cryptoExecutor.decryption(algo);
+            cryptoExecutor.decryption(algo, details.sourcePath(), details.destPath());
             programLogger.info(END_DEC_MESSAGE);
         }
 
@@ -97,17 +52,16 @@ public class AlgoManager {
     }
 
 
-    private void directory(Algorithm algo) {
-        FileUtils fileUtils = new FileUtils();
-        fileUtils.createDirectory(destPath);
+    private void directory(Algorithm algo, Details details) {
+        fileUtils.createDirectory(details.destPath());
         final int THREAD_COUNT = Runtime.getRuntime().availableProcessors();
 
-        List<Path> filePaths = fileUtils.getFilePaths(sourcePath);
+        List<Path> filePaths = fileUtils.getFilePaths(details.sourcePath());
 
-        if (encryptionFlag) {
-            AlgoManager.fileUtils.serializeWriting(algo, keysFilePath);
+        if (details.encFlag()) {
+            fileUtils.serializeWriting(algo, details.keysFilePath());
         } else {
-            AlgoManager.fileUtils.serializeReading(keysFilePath);
+            fileUtils.serializeReading(details.keysFilePath());
         }
 
         int filesPerThread = filePaths.size() / THREAD_COUNT;
@@ -123,64 +77,22 @@ public class AlgoManager {
             }
 
             List<Path> fileSubset = filePaths.subList(startIndex, endIndex);
+
+            executorService.execute(new DirectoryCrypto(fileUtils, cryptoExecutor, fileSubset, details.destPath(), details.encFlag(), algo));
+
             startIndex = endIndex;
             endIndex += filesPerThread;
-
-            executorService.execute(new DirectoryCrypto(algo, fileSubset, destPath, encryptionFlag));
         }
 
         executorService.shutdown();
     }
 
 
-    public void execute(Algorithm algo) {
-        if (isFile) {
-            file(algo);
+    public void execute(Algorithm algo, Details details) {
+        if (details.isFile()) {
+            file(algo, details);
         } else {
-            directory(algo);
+            directory(algo, details);
         }
-    }
-
-
-    public byte getKey(String cipherName, int index) {
-        if(encryptionFlag) {
-            return getRandomKey(cipherName);
-        } else {
-            return fileUtils.serializeReading(keysFilePath)[index];
-        }
-    }
-
-
-    public byte getRandomKey(String cipherName) {
-        byte key;
-
-        if(cipherName.equals(MULTI_NAME)) {
-            do {
-                key = (byte)(new Random()).nextInt(1, Byte.MAX_VALUE);
-            } while ((key % 2) == 0 || !isCoprime(key));
-        }
-
-        else {
-            key = (byte)(new Random()).nextInt(1, Byte.MAX_VALUE);
-        }
-
-        return key;
-    }
-
-    /**
-     * Used for Multiplicative generated random key.
-     */
-    private boolean isCoprime(int num) {
-        return gcd(num, Byte.MAX_VALUE) == 1;
-    }
-
-    /**
-     * Used for Multiplicative generated random key.
-     */
-    private int gcd(int firstNum, int secNum) {
-        if (secNum == 0) {
-            return firstNum;
-        }
-        return gcd(secNum, firstNum % secNum);
     }
 }
